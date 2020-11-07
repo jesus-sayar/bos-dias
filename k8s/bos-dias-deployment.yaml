@@ -14,7 +14,7 @@ spec:
         app: bos-dias
     spec:
       containers:
-      - image: jsayar/bos-dias:v2
+      - image: jsayar/bos-dias:v3
         name: bos-dias
         ports:
         - containerPort: 80
