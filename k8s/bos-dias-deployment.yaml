@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bos-dias
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: bos-dias
+  template:
+    metadata:
+      labels:
+        app: bos-dias
+    spec:
+      containers:
+      - image: jsayar/bos-dias:v1
+        name: bos-dias
+        ports:
+        - containerPort: 80
